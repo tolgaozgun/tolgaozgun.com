@@ -18,6 +18,7 @@ import { Link } from 'react-scroll';
 import { Search } from '../search/Search';
 import classes from './Header.module.css';
 import { HeaderControls } from './HeaderControls';
+import { MobileHeaderControls } from './MobileHeaderControls';
 
 const links = [
   { link: 'hero', label: 'Home' },
@@ -61,7 +62,7 @@ const Header = () => {
 
   const onSearch = () => {
     spotlight.open();
-    console.log('search');
+    closeDrawer();
   };
 
   return (
@@ -122,7 +123,19 @@ const Header = () => {
       >
         {/* <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md"> */}
         <Divider my="sm" />
-        <Stack>{items}</Stack>
+        <Stack>
+          {items}
+
+          <MobileHeaderControls
+            onSearch={onSearch}
+            githubLink={GITHUB_URL}
+            withDirectionToggle={false}
+            withDiscord={false}
+            discordLink="false"
+            withGithub={false}
+          />
+        </Stack>
+
         {/* </ScrollArea> */}
       </Drawer>
     </>
