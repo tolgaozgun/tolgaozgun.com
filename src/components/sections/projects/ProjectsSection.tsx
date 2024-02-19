@@ -17,7 +17,12 @@ const ProjectsSection = () => {
     );
   });
   return (
-    <section id="section-projects">
+    <section
+      id="section-projects"
+      style={{
+        marginTop: tablet_match ? 50 : 0,
+      }}
+    >
       <SectionHead title="Projects" subtitle="My project portfolio" />
 
       {tablet_match ? (

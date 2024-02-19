@@ -4,7 +4,7 @@ import { Group, Timeline, TimelineItem } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import jsonData from './education.json';
 
-const ExperienceSection = () => {
+const EducationSection = () => {
   const tablet_match = useMediaQuery('(max-width: 768px)');
   const cards = jsonData.data.map((item, index) => {
     if (tablet_match) {
@@ -16,6 +16,7 @@ const ExperienceSection = () => {
       </TimelineItem>
     );
   });
+
   return (
     <section id="section-education">
       <SectionHead title="Education" subtitle="My education history" />
@@ -31,4 +32,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default EducationSection;

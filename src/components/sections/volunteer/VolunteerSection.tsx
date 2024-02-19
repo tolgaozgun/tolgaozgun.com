@@ -17,7 +17,12 @@ const VolunteerSection = () => {
     );
   });
   return (
-    <section id="section-volunteer">
+    <section
+      id="section-volunteer"
+      style={{
+        marginTop: tablet_match ? 50 : 0,
+      }}
+    >
       <SectionHead title="Volunteer" subtitle="My volunteer and community work" />
 
       {tablet_match ? (

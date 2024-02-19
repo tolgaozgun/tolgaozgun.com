@@ -17,7 +17,12 @@ const ExperienceSection = () => {
     );
   });
   return (
-    <section id="section-experience">
+    <section
+      id="section-experience"
+      style={{
+        marginTop: tablet_match ? 50 : 0,
+      }}
+    >
       <SectionHead title="Experience" subtitle="My previous work experience" />
 
       {tablet_match ? (
