@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "title": "LinguistAI",
+      "subtitle": "Advanced Chatbot Development",
+      "githubLink": "https://github.com/linguistai",
+      "projectLink": "https://linguistai.app",
+      "description": [
+        "Led the development of an advanced chatbot for LinguistAI using Large Language Models (LLMs), including LangChain and LLaMa 2, to provide personalized language learning experiences.",
+        "Developed mobile application features using React Native and established a CI/CD pipeline with GitHub Actions, Docker, and Ubuntu."
+      ],
+      "period": "Sep 2023 \u2013 Present",
+      "start_date": "2023-09-01",
+      "end_date": "",
+      "is_active": true,
+      "techs": [
+        "Large Language Models",
+        "Machine Learning",
+        "React Native",
+        "Docker",
+        "Linux",
+        "CI/CD"
+      ],
+      "tag": "chatbot",
+      "id": "d5d4b4e8-09c6-4d83-8e68-ca4176c70daa"
+    },
+    {
+      "title": "Visually Coherent Image Inpainting of Human Faces",
+      "subtitle": "Computer Vision Project",
+      "githubLink": "https://github.com/Bilkent-ML-Project/DCGAN-Image-Inpainting",
+      "description": [
+        "Developed a DCGAN model with an encoder network for image inpainting, focusing on human face reconstruction as part of a team.",
+        "Utilized the CelebFaces Attributes dataset, implementing pre-processing techniques such as image masking and batch processing."
+      ],
+      "techs": ["PyTorch", "GANs", "Machine Learning", "Python"],
+      "period": "Sep 2023 \u2013 Jan 2024",
+      "start_date": "2023-09-01",
+      "end_date": "2024-01-31",
+      "is_active": false,
+      "tag": "deep-learning",
+      "id": "e2037998-9d8c-404c-9bda-af4ae0867fb8"
+    },
+    {
+      "title": "ZooNet",
+      "subtitle": "Bird Classification CNN",
+      "githubLink": "https://github.com/tolgaozgun/ZooNet",
+      "description": [
+        "Developed a CNN for bird classification using PyTorch, focusing on a subset of ImageNet with extensive training and validation datasets as part of a team.",
+        "Conducted hyperparameter experiments and implemented a bounding box approach for bird detection."
+      ],
+      "techs": ["PyTorch", "Machine Learning", "Python"],
+      "period": "Jan 2023 \u2013 Jun 2023",
+      "start_date": "2023-01-01",
+      "end_date": "2023-06-30",
+      "is_active": false,
+      "tag": "machine-learning",
+      "id": "d6e6ca69-3696-4a28-b64b-5ee1af9b1f3b"
+    },
+    {
+      "title": "Erasmust",
+      "subtitle": "Full-stack Web Application",
+      "githubLink": "https://github.com/tolgaozgun/erasmust",
+      "description": [
+        "Built a full-stack web application using React, Redux, Spring Boot, and RESTful API as part of a team.",
+        "Managed the CI/CD pipeline using Docker, Jenkins, and Git in a Linux environment."
+      ],
+      "techs": ["Spring Boot", "React", "CI/CD", "Docker", "Linux"],
+      "period": "Sep 2022 \u2013 Dec 2022",
+      "start_date": "2022-09-01",
+      "end_date": "2022-12-31",
+      "is_active": false,
+      "tag": "web-development",
+      "id": "173be34a-e324-4a4f-bfff-aebdaeb9b1cf"
+    },
+    {
+      "title": "Rudelang",
+      "subtitle": "Programming Language for IoT Devices",
+      "githubLink": "https://github.com/tolgaozgun/Rudelang",
+      "description": [
+        "Designed a new programming language specialized for IoT devices, implementing a lexical analyzer with Lex and a parser with Yacc as part of a team."
+      ],
+      "techs": ["Lex", "Yacc", "Programming Language", "C"],
+      "period": "Sep 2022 \u2013 Oct 2022",
+      "start_date": "2022-09-01",
+      "end_date": "2022-10-31",
+      "is_active": false,
+      "tag": "iot",
+      "id": "2f45bc29-7ae0-42c1-959f-ce1929c58e4a"
+    },
+    {
+      "title": "Bilader",
+      "githubLink": "https://github.com/tolgaozgun/bilader-app",
+      "subtitle": "Android Application",
+      "description": [
+        "Built an Android app using Java and Android Studio that was published on Google Play Store as part of a team.",
+        "Developed a backend with Apache Tomcat, JSP Servlets, and MariaDB, implementing features like cookies and 2FA login."
+      ],
+      "techs": ["Android", "JSP", "Java"],
+      "period": "Feb 2021 \u2013 May 2021",
+      "start_date": "2021-02-01",
+      "end_date": "2021-05-31",
+      "is_active": false,
+      "tag": "mobile-app",
+      "id": "d09efc36-fa41-4396-96f4-adee3a05f015"
+    }
+  ]
+}

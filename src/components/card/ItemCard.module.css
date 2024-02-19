@@ -1,0 +1,67 @@
+.card {
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+.card_title {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-weight: bold;
+}
+
+.card_line {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 150ms ease,
+    box-shadow 100ms ease;
+  padding: var(--mantine-spacing-xl);
+  padding-left: calc(var(--mantine-spacing-lg) * 2);
+
+  @mixin hover {
+    box-shadow: var(--mantine-shadow-md);
+    transform: scale(1.02);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: rem(6px);
+    background-image: linear-gradient(0, var(--mantine-color-blue-6), var(--mantine-color-cyan-6));
+  }
+}
+
+.card_line_off {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 150ms ease,
+    box-shadow 100ms ease;
+  padding: var(--mantine-spacing-xl);
+  padding-left: calc(var(--mantine-spacing-lg) * 2);
+
+  @mixin hover {
+    box-shadow: var(--mantine-shadow-md);
+    transform: scale(1.02);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: rem(6px);
+    background-image: linear-gradient(0, var(--mantine-color-gray-6), var(--mantine-color-dark-6));
+  }
+}

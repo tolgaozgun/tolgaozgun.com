@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "title": "HAVELSAN",
+      "subtitle": "Software Engineer Intern",
+      "address": "Ankara, Turkiye",
+      "description": [
+        "Developed an internal chatbot by leveraging LangChain and various LLM models such as Llama and GPT-4.",
+        "Reverse-engineered a classified Java project, bolstering its applicability in the field of cyber security."
+      ],
+      "period": "Aug 2023 - Sep 2023",
+      "start_date": "2023-08-01",
+      "end_date": "2023-09-16",
+      "is_active": false,
+      "tag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Havelsan_logo.svg/1200px-Havelsan_logo.svg.png",
+      "id": "762f05ef-d974-42cc-975f-868dea0113f9"
+    },
+    {
+      "title": "Digital Transformation Office, Presidency of Turkiye",
+      "subtitle": "AI/ML Engineer Intern",
+      "address": "Ankara, Turkiye",
+      "description": [
+        "Contributed to national digital transformation projects with AI and ML solutions.",
+        "Worked on data analysis and pattern recognition for government digital services improvement."
+      ],
+      "period": "Jan 2020 - May 2021",
+      "start_date": "2020-01-01",
+      "end_date": "2021-05-31",
+      "is_active": false,
+      "tag": "https://cbddo.gov.tr/images/fors.png",
+      "id": "b1a7432d-dedf-41d1-ad67-4e2b739a0685"
+    },
+    {
+      "title": "Ar\u00e7elik Global",
+      "subtitle": "Software Engineer Intern",
+      "address": "Ankara, Turkiye",
+      "description": [
+        "Developed and maintained scalable web applications for global operations.",
+        "Implemented responsive UI designs and improved application performance."
+      ],
+      "period": "Sep 2018 - Dec 2019",
+      "start_date": "2018-09-01",
+      "end_date": "2019-12-31",
+      "is_active": false,
+      "tag": "https://www.arcelikglobal.com/Content/images/navbar/logo-en.png",
+      "id": "3260bbae-bef8-4e36-9409-46b2217c2d2c"
+    },
+    {
+      "title": "Technarts",
+      "subtitle": "Software Engineer Intern",
+      "address": "Ankara, Turkiye",
+      "description": [
+        "Supported software development projects with coding, testing, and documentation.",
+        "Gained experience in IoT solutions and smart city technologies."
+      ],
+      "period": "Jun 2017 - Aug 2018",
+      "start_date": "2017-06-01",
+      "end_date": "2018-08-31",
+      "is_active": false,
+      "tag": "https://technarts.com/_next/static/media/logo.ba3c7565.png",
+      "id": "53331b71-0c9c-486e-84cf-7ac7143fb397"
+    },
+    {
+      "title": "Ziraat Teknoloji",
+      "subtitle": "Software Engineer Intern",
+      "address": "Istanbul, Turkiye",
+      "description": [
+        "Assisted in the maintenance and development of banking software solutions.",
+        "Participated in the analysis and implementation of database systems for financial applications."
+      ],
+      "period": "Jul 2016 - Sep 2016",
+      "start_date": "2016-07-01",
+      "end_date": "2016-09-30",
+      "is_active": false,
+      "tag": "https://www.teknoparkistanbul.com.tr/uploads/companies/logo%20(6)_w540_op_op.webp",
+      "id": "44ecfcbd-8ca9-449a-b0e5-3d7dc02c2a28"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "title": "Indie Games Group, Turkey by Google Play",
+      "projectLink": "https://play.google.com/console/about/programs/indiegames/",
+      "subtitle": "Lead",
+      "description": [
+        "Enhanced user experience for over 1100 members, focusing on engagement and interaction.",
+        "Led technical workshops on game development and the publishing process.",
+        "Managed the social media, creating engaging short and long-form content."
+      ],
+      "period": "Sep 2022 - Present",
+      "start_date": "2022-09-01",
+      "end_date": "",
+      "is_active": true,
+      "tag": "https://media.licdn.com/dms/image/C4D0BAQGLs4JFYj3mOA/company-logo_100_100/0/1645620207798?e=1716422400&v=beta&t=Dp3Qdxm46JTPeN6whQJoFRux0ZR7OkrEGHxO0YyihVU",
+      "id": "6961deed-ecfc-41ea-b354-f7cc14966c4c"
+    },
+    {
+      "title": "Google Developer Student Clubs, Turkey",
+      "projectLink": "https://gdsc.community.dev/",
+      "subtitle": "Facilitator",
+      "description": [
+        "Led the development of an internal website using React, Mantine, Spring Boot, and PostgreSQL.",
+        "Mentored over 120 leads through technical and organizational workshops."
+      ],
+      "period": "Jun 2023 - Present",
+      "start_date": "2023-06-01",
+      "end_date": "",
+      "is_active": true,
+      "tag": "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_KzUurne.png",
+      "id": "9847d5cd-9efc-4785-b172-ba1b65d6f7f0"
+    },
+    {
+      "title": "Google Developer Student Clubs, Bilkent University",
+      "projectLink": "https://gdsc.community.dev/ihsan-dogramaci-bilkent-university/",
+      "subtitle": "Lead",
+      "description": [
+        "Conducted Android workshops with Jetpack Compose and Kotlin for over 50 participants.",
+        "Organized and executed 8 successful events, managing a team of 12."
+      ],
+      "period": "Sep 2022 - Jun 2023",
+      "start_date": "2022-09-01",
+      "end_date": "2023-06-30",
+      "is_active": false,
+      "tag": "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_KzUurne.png",
+      "id": "02a260b5-dfff-4188-9d52-29f447b22dab"
+    }
+  ]
+}
