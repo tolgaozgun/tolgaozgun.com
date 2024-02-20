@@ -33,8 +33,11 @@ const Header = () => {
   const [active, setActive] = useState(links[0].link);
   const tabletMatch = useMediaQuery('(max-width: 768px)');
   const theme = useMantineTheme();
-  const trackSection = (sectionId: string) => {
-    sendEvent('section', 'visit', sectionId);
+  const trackSection = (sectionId: string, visitType: string) => {
+    sendEvent('section', 'visit', sectionId, {
+      visit_type: visitType,
+      visit_from: 'header',
+    });
   };
 
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -52,11 +55,12 @@ const Header = () => {
       data-active={active === link.link || undefined}
       onClick={() => {
         setActive(link.link);
+        trackSection(link.label, 'click');
         closeDrawer();
       }}
       onSetActive={() => {
         setActive(link.link);
-        trackSection(link.label);
+        trackSection(link.label, 'scroll');
       }}
       activeClass="active"
       spy={true}
