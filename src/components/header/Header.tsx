@@ -46,9 +46,6 @@ const Header = () => {
     <Link
       key={link.label}
       to={link.link}
-      // style={{
-      //   fontSize: rem(16),
-      // }}
       offset={-100}
       smooth="easeInOutQuart"
       className={classes.link}
