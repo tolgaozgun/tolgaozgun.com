@@ -8,6 +8,7 @@ import {
   TWITTER_URL,
   YOUTUBE_URL,
 } from '@/constants';
+import { sendEvent } from '@/util/analytics';
 import {
   ActionIcon,
   Button,
@@ -34,34 +35,74 @@ import classes from './Hero.module.css';
 const Hero = () => {
   const openAcademicResume = () => {
     window.open(ACADEMIC_RESUME_URL, '_blank');
+    sendEvent('outbound', 'visit', ACADEMIC_RESUME_URL, {
+      redirect_purpose: 'academic_resume',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openProfessionalResume = () => {
     window.open(PROFESSIONAL_RESUME_URL, '_blank');
+    sendEvent('outbound', 'visit', PROFESSIONAL_RESUME_URL, {
+      redirect_purpose: 'professional_resume',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openInstagram = () => {
     window.open(INSTAGRAM_URL, '_blank');
+    sendEvent('outbound', 'visit', INSTAGRAM_URL, {
+      redirect_purpose: 'instagram',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openTwitter = () => {
     window.open(TWITTER_URL, '_blank');
+    sendEvent('outbound', 'visit', TWITTER_URL, {
+      redirect_purpose: 'twitter',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openLinkedIn = () => {
     window.open(LINKEDIN_URL, '_blank');
+    sendEvent('outbound', 'visit', LINKEDIN_URL, {
+      redirect_purpose: 'linkedin',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openGithub = () => {
     window.open(GITHUB_URL, '_blank');
+    sendEvent('outbound', 'visit', GITHUB_URL, {
+      redirect_purpose: 'github',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const openYoutube = () => {
     window.open(YOUTUBE_URL, '_blank');
+    sendEvent('outbound', 'visit', YOUTUBE_URL, {
+      redirect_purpose: 'youtube',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   const sendMail = () => {
     window.open(EMAIL_URL, '_blank');
+    sendEvent('outbound', 'visit', EMAIL_URL, {
+      redirect_purpose: 'email',
+      redirect_type: '_blank',
+      redirect_from: 'hero',
+    });
   };
 
   return (

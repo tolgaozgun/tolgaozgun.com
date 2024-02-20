@@ -6,6 +6,7 @@ import {
   TWITTER_URL,
   YOUTUBE_URL,
 } from '@/constants';
+import { sendEvent } from '@/util/analytics';
 import { ActionIcon, Group, Image, Text, rem } from '@mantine/core';
 import {
   IconBrandGithub,
@@ -17,37 +18,59 @@ import {
 } from '@tabler/icons-react';
 import classes from './Footer.module.css';
 
-// const links = [
-//   { link: '#', label: 'Contact' },
-//   { link: '#', label: 'Privacy' },
-//   { link: '#', label: 'Blog' },
-//   { link: '#', label: 'Store' },
-//   { link: '#', label: 'Careers' },
-// ];
-
 const Footer = () => {
   const openInstagram = () => {
     window.open(INSTAGRAM_URL, '_blank');
+    sendEvent('outbound', 'visit', INSTAGRAM_URL, {
+      redirect_purpose: 'instagram',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   const openTwitter = () => {
     window.open(TWITTER_URL, '_blank');
+    sendEvent('outbound', 'visit', TWITTER_URL, {
+      redirect_purpose: 'twitter',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   const openLinkedIn = () => {
     window.open(LINKEDIN_URL, '_blank');
+    sendEvent('outbound', 'visit', LINKEDIN_URL, {
+      redirect_purpose: 'linkedin',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   const openGithub = () => {
     window.open(GITHUB_URL, '_blank');
+    sendEvent('outbound', 'visit', GITHUB_URL, {
+      redirect_purpose: 'github',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   const openYoutube = () => {
     window.open(YOUTUBE_URL, '_blank');
+    sendEvent('outbound', 'visit', YOUTUBE_URL, {
+      redirect_purpose: 'youtube',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   const sendMail = () => {
     window.open(EMAIL_URL, '_blank');
+    sendEvent('outbound', 'visit', EMAIL_URL, {
+      redirect_purpose: 'email',
+      redirect_type: '_blank',
+      redirect_from: 'footer',
+    });
   };
 
   return (

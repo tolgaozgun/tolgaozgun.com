@@ -1,4 +1,5 @@
 import { GITHUB_URL } from '@/constants';
+import { sendEvent } from '@/util/analytics';
 import {
   Burger,
   Container,
@@ -32,6 +33,9 @@ const Header = () => {
   const [active, setActive] = useState(links[0].link);
   const tabletMatch = useMediaQuery('(max-width: 768px)');
   const theme = useMantineTheme();
+  const trackSection = (sectionId: string) => {
+    sendEvent('section', 'visit', sectionId);
+  };
 
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
@@ -52,6 +56,7 @@ const Header = () => {
       }}
       onSetActive={() => {
         setActive(link.link);
+        trackSection(link.label);
       }}
       activeClass="active"
       spy={true}

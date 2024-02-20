@@ -1,3 +1,4 @@
+import { sendEvent } from '@/util/analytics';
 import {
   Badge,
   Button,
@@ -58,10 +59,22 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   const openGithub = (githubLink: string) => {
     window.open(githubLink, '_blank');
+    sendEvent('outbound', 'visit', githubLink, {
+      redirect_purpose: 'github_link',
+      redirect_item: data.title,
+      redirect_type: '_blank',
+      redirect_from: 'project_card',
+    });
   };
 
   const openProject = (projectLink: string) => {
     window.open(projectLink, '_blank');
+    sendEvent('outbound', 'visit', projectLink, {
+      redirect_purpose: 'project_link',
+      redirect_item: data.title,
+      redirect_type: '_blank',
+      redirect_from: 'project_card',
+    });
   };
 
   const distance = intervalToDuration({

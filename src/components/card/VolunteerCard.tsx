@@ -1,3 +1,4 @@
+import { sendEvent } from '@/util/analytics';
 import {
   Button,
   Group,
@@ -56,6 +57,12 @@ const VolunteerCard = (props: VolunteerCardProps) => {
 
   const openWebsite = (projectLink: string) => {
     window.open(projectLink, '_blank');
+    sendEvent('outbound', 'visit', projectLink, {
+      redirect_purpose: 'project_link',
+      redirect_item: data.title,
+      redirect_type: '_blank',
+      redirect_from: 'volunteer_card',
+    });
   };
 
   const distance = intervalToDuration({
