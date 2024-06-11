@@ -11,11 +11,19 @@ export default function SectionHead(props: SectionHeadProps) {
 
   return (
     <>
-      <Title data-aos="fade-up" className={classes.title}>
+      <Title
+        // data-aos="fade-up"
+        className={classes.title}
+      >
         {title}
       </Title>
 
-      <Text data-aos="fade-up" size="lg" c="dimmed" className={classes.subtitle}>
+      <Text
+        // data-aos="fade-up"
+        size="lg"
+        c="dimmed"
+        className={classes.subtitle}
+      >
         {subtitle}
       </Text>
     </>

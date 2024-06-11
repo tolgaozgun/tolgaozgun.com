@@ -122,22 +122,34 @@ const Hero = () => {
             h={140}
             w={140}
             style={{ borderRadius: rem(55) }}
-            data-aos="fade-up"
+            // data-aos="fade-up"
           />
-          <Title data-aos="fade-up" className={classes.title}>
+          <Title
+            // data-aos="fade-up"
+            className={classes.title}
+          >
             {`Hello, I'm `}
             <Text component="span" className={classes.highlight} inherit>
               Tolga Özgün
             </Text>
           </Title>
-          <Title data-aos="fade-up" c="dimmed" className={classes.subtitle}>
+          <Title
+            // data-aos="fade-up"
+            c="dimmed"
+            className={classes.subtitle}
+          >
             {`Senior Computer Engineering Student at `}
             <Text component="span" inherit>
               Bilkent University
             </Text>
           </Title>
           <Container p={0} size={600}>
-            <Text data-aos="fade-up" size="lg" c="dimmed" className={classes.description}>
+            <Text
+              // data-aos="fade-up"
+              size="lg"
+              c="dimmed"
+              className={classes.description}
+            >
               I am interested in working on Machine Learning and Fullstack Website Development. I
               enjoy learning new things, both in technology and other fields.
             </Text>
@@ -146,7 +158,7 @@ const Hero = () => {
             style={{
               justifyContent: 'center',
             }}
-            data-aos="fade-up"
+            // data-aos="fade-up"
             mt="md"
           >
             <Button size={'lg'} w={230} variant="gradient" onClick={openAcademicResume}>
@@ -162,7 +174,7 @@ const Hero = () => {
             className={classes.links}
             justify="flex-end"
             wrap="nowrap"
-            data-aos="fade-up"
+            // data-aos="fade-up"
             pt="xl"
           >
             <ActionIcon size="lg" variant="subtle" onAuxClick={openTwitter} onClick={openTwitter}>
@@ -189,7 +201,9 @@ const Hero = () => {
               <IconMail style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
             </ActionIcon>
           </Group>
-          <ColorSchemeToggle data-aos="fade-up" />
+          <ColorSchemeToggle
+          // data-aos="fade-up"
+          />
         </Stack>
       </div>
     </section>

@@ -111,8 +111,8 @@ const ProjectCard = (props: ProjectCardProps) => {
       withBorder
       radius="md"
       className={data.is_active ? classes.card_line : classes.card_line_off}
-      data-aos="zoom-in"
-      data-aos-delay={100 * (index + 1)}
+      // data-aos="zoom-in"
+      // data-aos-delay={100 * (index + 1)}
     >
       <Group>
         <Text size="xl" fw={500} mt="md">
