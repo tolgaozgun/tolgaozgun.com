@@ -3,7 +3,6 @@ import {
   Badge,
   Button,
   Group,
-  Image,
   List,
   ListItem,
   Paper,
@@ -24,6 +23,7 @@ import {
 } from '@tabler/icons-react';
 import { intervalToDuration } from 'date-fns';
 import classes from './ProjectCard.module.css';
+import ImageWithSkeleton from '../ImageWithSkeleton';
 
 interface WorkEduEntity {
   id: string;
@@ -103,7 +103,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   } else if (data.tag === 'social') {
     icon = <IconSocial style={iconStyle} stroke={1.5} />;
   } else {
-    icon = <Image src={data.tag} alt={data.title} />;
+    icon = <ImageWithSkeleton src={data.tag} alt={data.title} sHeight={100} sWidth={100} />;
   }
 
   return (

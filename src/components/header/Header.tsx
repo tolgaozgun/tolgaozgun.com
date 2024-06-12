@@ -78,7 +78,7 @@ const Header = () => {
           <Group>
             <Image
               src={
-                'https://media.licdn.com/dms/image/D4D03AQGw_v52AoVu-A/profile-displayphoto-shrink_800_800/0/1686460768504?e=1713398400&v=beta&t=fipf7YSnAmD3yh6Ppy0iG4ESI8gXgjSMvsWTTk5obuU'
+                'https://firebasestorage.googleapis.com/v0/b/tolga-ozgun-personal.appspot.com/o/IMG_2156-2.png?alt=media&token=b65d3192-7153-48fb-a359-8ad89083afee'
               }
               alt="avatar"
               h={40}
@@ -114,7 +114,7 @@ const Header = () => {
           <Group>
             <Image
               src={
-                'https://media.licdn.com/dms/image/D4D03AQGw_v52AoVu-A/profile-displayphoto-shrink_800_800/0/1686460768504?e=1713398400&v=beta&t=fipf7YSnAmD3yh6Ppy0iG4ESI8gXgjSMvsWTTk5obuU'
+                'https://firebasestorage.googleapis.com/v0/b/tolga-ozgun-personal.appspot.com/o/IMG_2156-2.png?alt=media&token=b65d3192-7153-48fb-a359-8ad89083afee'
               }
               alt="avatar"
               h={40}

@@ -2,7 +2,6 @@ import { sendEvent } from '@/util/analytics';
 import {
   Button,
   Group,
-  Image,
   List,
   ListItem,
   Paper,
@@ -22,6 +21,7 @@ import {
   IconSocial,
 } from '@tabler/icons-react';
 import { intervalToDuration } from 'date-fns';
+import ImageWithSkeleton from '../ImageWithSkeleton';
 import classes from './VolunteerCard.module.css';
 
 interface WorkEduEntity {
@@ -91,7 +91,7 @@ const VolunteerCard = (props: VolunteerCardProps) => {
   } else if (data.tag === 'social') {
     icon = <IconSocial style={iconStyle} stroke={1.5} />;
   } else {
-    icon = <Image src={data.tag} alt={data.title} />;
+    icon = <ImageWithSkeleton src={data.tag} alt={data.title} sHeight={100} sWidth={100} />;
   }
 
   return (

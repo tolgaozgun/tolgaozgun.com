@@ -9,17 +9,7 @@ import {
   YOUTUBE_URL,
 } from '@/constants';
 import { sendEvent } from '@/util/analytics';
-import {
-  ActionIcon,
-  Button,
-  Container,
-  Group,
-  Image,
-  Stack,
-  Text,
-  Title,
-  rem,
-} from '@mantine/core';
+import { ActionIcon, Button, Container, Group, Stack, Text, Title, rem } from '@mantine/core';
 import {
   IconBrandGithub,
   IconBrandInstagram,
@@ -28,11 +18,15 @@ import {
   IconBrandYoutube,
   IconMail,
 } from '@tabler/icons-react';
+import { useState } from 'react';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 import Dots from '../Dots';
+import ImageWithSkeleton from '../ImageWithSkeleton';
 import classes from './Hero.module.css';
 
 const Hero = () => {
+  const [isProfileImageLoading, setIsProfileImageLoading] = useState(true);
+
   const openAcademicResume = () => {
     window.open(ACADEMIC_RESUME_URL, '_blank');
     sendEvent('outbound', 'visit', ACADEMIC_RESUME_URL, {
@@ -114,7 +108,7 @@ const Hero = () => {
 
       <div className={classes.inner}>
         <Stack gap={10} justify="center" align="center">
-          <Image
+          <ImageWithSkeleton
             src={
               'https://firebasestorage.googleapis.com/v0/b/tolga-ozgun-personal.appspot.com/o/IMG_2156-2.png?alt=media&token=b65d3192-7153-48fb-a359-8ad89083afee'
             }
