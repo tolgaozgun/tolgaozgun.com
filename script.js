@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function type() {
         const currentWord = words[wordIndex];
-        
+
         if (isDeleting) {
             textElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
@@ -64,6 +64,40 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
+    });
+
+    // Google Analytics Event Tracking
+    // Track Resume Download
+    const resumeBtn = document.querySelector('a[href*="drive.google.com"]');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', () => {
+            gtag('event', 'download_resume', {
+                'event_category': 'engagement',
+                'event_label': 'Resume Download'
+            });
+        });
+    }
+
+    // Track Social Links
+    document.querySelectorAll('.social-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            const platform = this.querySelector('i').className.replace('fab fa-', '').replace('fas fa-', '');
+            gtag('event', 'social_click', {
+                'event_category': 'engagement',
+                'event_label': platform
+            });
+        });
+    });
+
+    // Track Project Links
+    document.querySelectorAll('.project-link').forEach(link => {
+        link.addEventListener('click', function () {
+            const projectName = this.closest('.project-content').querySelector('h3').textContent;
+            gtag('event', 'view_project', {
+                'event_category': 'engagement',
+                'event_label': projectName
+            });
+        });
     });
 
     // Header Scroll Effect
