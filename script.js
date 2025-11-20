@@ -66,45 +66,38 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Google Analytics Event Tracking (via Firebase)
-    // Wait for Firebase to load
-    window.addEventListener('load', () => {
-        if (typeof firebase !== 'undefined') {
-            const analytics = firebase.analytics();
-
-            // Track Resume Download
-            const resumeBtn = document.querySelector('a[href*="drive.google.com"]');
-            if (resumeBtn) {
-                resumeBtn.addEventListener('click', () => {
-                    analytics.logEvent('download_resume', {
-                        'event_category': 'engagement',
-                        'event_label': 'Resume Download'
-                    });
-                });
-            }
-
-            // Track Social Links
-            document.querySelectorAll('.social-links a').forEach(link => {
-                link.addEventListener('click', function () {
-                    const platform = this.querySelector('i').className.replace('fab fa-', '').replace('fas fa-', '');
-                    analytics.logEvent('social_click', {
-                        'event_category': 'engagement',
-                        'event_label': platform
-                    });
-                });
+    // Google Analytics Event Tracking
+    // Track Resume Download
+    const resumeBtn = document.querySelector('a[href*="drive.google.com"]');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', () => {
+            gtag('event', 'download_resume', {
+                'event_category': 'engagement',
+                'event_label': 'Resume Download'
             });
+        });
+    }
 
-            // Track Project Links
-            document.querySelectorAll('.project-link').forEach(link => {
-                link.addEventListener('click', function () {
-                    const projectName = this.closest('.project-content').querySelector('h3').textContent;
-                    analytics.logEvent('view_project', {
-                        'event_category': 'engagement',
-                        'event_label': projectName
-                    });
-                });
+    // Track Social Links
+    document.querySelectorAll('.social-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            const platform = this.querySelector('i').className.replace('fab fa-', '').replace('fas fa-', '');
+            gtag('event', 'social_click', {
+                'event_category': 'engagement',
+                'event_label': platform
             });
-        }
+        });
+    });
+
+    // Track Project Links
+    document.querySelectorAll('.project-link').forEach(link => {
+        link.addEventListener('click', function () {
+            const projectName = this.closest('.project-content').querySelector('h3').textContent;
+            gtag('event', 'view_project', {
+                'event_category': 'engagement',
+                'event_label': projectName
+            });
+        });
     });
 
     // Header Scroll Effect
