@@ -67,12 +67,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Google Analytics Event Tracking
+
+    // 1. Track Scroll Depth
+    let scrollDepths = {
+        25: false,
+        50: false,
+        75: false,
+        90: false,
+        100: false
+    };
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        Object.keys(scrollDepths).forEach(depth => {
+            if (scrollPercent >= depth && !scrollDepths[depth]) {
+                scrollDepths[depth] = true;
+                gtag('event', 'scroll_depth', {
+                    'event_category': 'engagement',
+                    'event_label': `${depth}%`,
+                    'value': depth
+                });
+            }
+        });
+    });
+
+    // 2. Track All Link Clicks (Generic)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link) {
+            const url = link.href;
+            const text = link.textContent.trim() || link.querySelector('i')?.className || 'Image/Icon';
+
+            // Don't double count specific events if you don't want to, 
+            // but for "what links have they clicked" it's good to have a raw log too.
+            // We'll log a generic 'link_click' for everything.
+            gtag('event', 'link_click', {
+                'event_category': 'engagement',
+                'event_label': text,
+                'link_url': url
+            });
+        }
+    });
+
+    // 3. Specific Interactions (kept for cleaner reporting on key actions)
     // Track Resume Download
     const resumeBtn = document.querySelector('a[href*="drive.google.com"]');
     if (resumeBtn) {
         resumeBtn.addEventListener('click', () => {
             gtag('event', 'download_resume', {
-                'event_category': 'engagement',
+                'event_category': 'conversion', // Promoted to conversion
                 'event_label': 'Resume Download'
             });
         });
