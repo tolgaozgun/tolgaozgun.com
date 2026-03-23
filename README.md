@@ -1,47 +1,97 @@
-# Tolga Ozgun - Personal Portfolio
+# Tolga Ozgun - Personal Website
 
-This is the source code for my personal portfolio website, hosted at [tolgaozgun.com](https://tolgaozgun.com).
+Personal website with blog, hosted at [tolgaozgun.com](https://tolgaozgun.com).
 
 ## Overview
 
-A premium, responsive single-page portfolio built with HTML, CSS, and JavaScript. It features a dark mode aesthetic with glassmorphism effects, smooth animations, and a detailed showcase of my projects and experience.
+A clean, personal website built with Next.js featuring a warm, cozy design. Includes a blog, about section, and placeholders for future game dev updates and video content.
 
 ## Features
 
--   **Responsive Design**: Optimized for all devices (desktop, tablet, mobile).
--   **Dark Mode Aesthetic**: Modern UI with gradients and glassmorphism.
--   **Interactive Elements**: Typing effect, smooth scrolling, and fade-in animations.
--   **Project Showcase**: Detailed cards for 18+ projects with GitHub links.
--   **Experience Timeline**: Visual timeline of my professional journey.
+- **Blog** - MDX-based blog posts stored in `content/blog/`
+- **Responsive Design** - Mobile-first, works on all screen sizes
+- **Warm Aesthetic** - Terracotta and cream color scheme with hand-drawn font accents
+- **Fast** - Static site generation for optimal performance
+- **No Tracking** - Privacy-focused, just a person on the internet
 
 ## Tech Stack
 
--   **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
--   **Deployment**: Firebase Hosting
--   **CI/CD**: GitHub Actions
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components (shadcn/ui-inspired)
+- **Blog Format**: MDX
+- **Hosting**: Firebase Hosting
+- **CI/CD**: GitHub Actions
 
 ## Local Development
 
-To run the site locally:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/tolgaozgun/tolgaozgun.com.git
+   ```
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/tolgaozgun/tolgaozgun.com.git
-    ```
-2.  Navigate to the directory:
-    ```bash
-    cd tolgaozgun.com
-    ```
-3.  Start a local server (e.g., using Python):
-    ```bash
-    python3 -m http.server 8080
-    ```
-4.  Open `http://localhost:8080` in your browser.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+This creates a static export in the `out/` directory for Firebase Hosting.
+
+## Adding Blog Posts
+
+Create a new `.mdx` file in `content/blog/`:
+
+```markdown
+---
+title: "Your Post Title"
+date: "2025-03-23"
+readTime: "5 min"
+tags: ["tag1", "tag2"]
+description: "A brief description of the post"
+---
+
+Your content here written in MDX...
+```
+
+## Project Structure
+
+```
+├── app/                    # Next.js app directory
+│   ├── page.tsx           # Homepage
+│   ├── blog/              # Blog pages
+│   ├── about/             # About page
+│   └── videos/            # Videos page
+├── components/            # React components
+├── content/blog/          # Blog post MDX files
+├── lib/                   # Utilities (blog parsing)
+└── public/                # Static assets
+```
 
 ## Deployment
 
-The site is automatically deployed to Firebase Hosting via GitHub Actions whenever changes are pushed to the `main` branch.
+The site is automatically deployed to Firebase Hosting via GitHub Actions when pushing to the `main` branch.
+
+To deploy manually:
+
+```bash
+npm run build
+firebase deploy
+```
 
 ## License
 
-[MIT](LICENSE)
+MIT
