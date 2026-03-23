@@ -56,7 +56,7 @@ export default function HomePage() {
       </div>
 
       <footer className="text-center py-6 sm:py-8 font-hand text-sm sm:text-base text-accent px-4">
-        made with love · no tracking · just a person on the internet ☕
+        made with love ❤️
       </footer>
     </main>
   );
