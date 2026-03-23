@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yourname :)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { background: #fdf8f2; color: #3a2e24; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 2.2rem; }
+    .nav-name { font-family: 'Gochi Hand', cursive; font-size: 22px; color: #b85c38; }
+    .nav-links { display: flex; gap: 1.8rem; }
+    .nav-links a { font-size: 14px; color: #7a6555; text-decoration: none; }
+    .nav-links a:hover { color: #b85c38; }
+
+    .hero { padding: 2.5rem 2.2rem 1rem; max-width: 700px; }
+    .wave { font-family: 'Gochi Hand', cursive; font-size: 15px; color: #c4885a; margin-bottom: 0.6rem; }
+    .hero h1 { font-family: 'Lora', serif; font-size: clamp(28px, 5vw, 44px); font-weight: 500; line-height: 1.2; color: #2e221a; margin: 0 0 1rem; }
+    .hero h1 em { color: #b85c38; font-style: italic; }
+    .hero p { font-size: 15px; line-height: 1.8; color: #6b5748; max-width: 480px; margin: 0 0 1.6rem; }
+    .hero-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-links a { font-size: 13px; color: #b85c38; text-decoration: none; border-bottom: 1.5px solid #e8c4aa; padding-bottom: 1px; }
+    .hero-links a:hover { border-color: #b85c38; }
+
+    .squiggle { margin: 1.5rem 2.2rem; border: none; border-top: 2px dashed #e8d5c4; }
+
+    .section { padding: 0.5rem 2.2rem 2rem; max-width: 760px; }
+    .section-label { font-family: 'Gochi Hand', cursive; font-size: 18px; color: #b85c38; margin: 0 0 1.2rem; }
+
+    .post-list { display: flex; flex-direction: column; gap: 0; }
+    .post-item { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; padding: 1rem 0; border-bottom: 1px solid #f0e4d8; }
+    .post-item:last-child { border-bottom: none; }
+    .post-dot { width: 8px; height: 8px; background: #e8c4aa; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .post-meta { font-size: 11px; color: #c4a992; margin-bottom: 3px; }
+    .post-title { font-family: 'Lora', serif; font-size: 16px; color: #2e221a; margin: 0 0 4px; font-weight: 500; }
+    .post-desc { font-size: 13px; color: #8a7060; line-height: 1.6; margin: 0; }
+    .post-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 7px; }
+    .tag { font-size: 11px; background: #f5ede4; color: #a07060; padding: 2px 8px; border-radius: 20px; }
+
+    .about-box { background: #fff9f4; border: 1.5px solid #f0ddd0; border-radius: 16px; padding: 1.5rem; display: flex; gap: 1.2rem; align-items: flex-start; }
+    .about-avatar { width: 56px; height: 56px; border-radius: 50%; background: #f5dfd0; border: 2px solid #e8c4aa; display: flex; align-items: center; justify-content: center; font-family: 'Gochi Hand', cursive; font-size: 20px; color: #b85c38; flex-shrink: 0; }
+    .about-text { font-size: 14px; color: #6b5748; line-height: 1.8; }
+    .about-text strong { color: #2e221a; font-weight: 500; }
+
+    .yt-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
+    .yt-card { background: #fff9f4; border: 1.5px solid #f0ddd0; border-radius: 12px; overflow: hidden; }
+    .yt-thumb { height: 90px; background: #f5ede4; display: flex; align-items: center; justify-content: center; }
+    .yt-play { width: 34px; height: 34px; background: #b85c38; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .yt-tri { width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 13px solid #fff9f4; margin-left: 3px; }
+    .yt-info { padding: 0.75rem; }
+    .yt-title { font-size: 13px; color: #2e221a; font-weight: 500; line-height: 1.4; margin: 0 0 4px; }
+    .yt-sub { font-size: 11px; color: #b09080; }
+
+    .gd-box { background: #fff9f4; border: 1.5px solid #f0ddd0; border-radius: 16px; padding: 1.25rem 1.5rem; }
+    .gd-status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #7a9e6e; background: #eef7e8; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.8rem; }
+    .gd-dot { width: 7px; height: 7px; background: #7a9e6e; border-radius: 50%; animation: blink 2s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+    .gd-title { font-family: 'Lora', serif; font-size: 18px; color: #2e221a; margin: 0 0 6px; font-weight: 500; }
+    .gd-desc { font-size: 13px; color: #7a6555; line-height: 1.75; margin: 0 0 1rem; }
+    .gd-updates { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .gd-chip { font-size: 12px; background: #f5ede4; color: #8a6050; padding: 5px 12px; border-radius: 20px; border: 1px solid #ead8cc; }
+
+    .footer { text-align: center; padding: 2rem 1rem; font-family: 'Gochi Hand', cursive; font-size: 15px; color: #c4a992; }
+
+    @media (max-width: 520px) {
+      .nav-links { gap: 1rem; }
+      .about-box { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="nav-name">yourname :)</span>
+    <div class="nav-links">
+      <a href="#">about</a>
+      <a href="#">blog</a>
+      <a href="#">gamedev</a>
+      <a href="#">videos</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="wave">hey there, welcome!</div>
+    <h1>I'm a software engineer<br>who loves <em>building things</em><br>&amp; writing about life.</h1>
+    <p>Turkish, living in the US, doing my Master's, making a game on the side, and trying to share what I learn along the way. This is my little corner of the internet.</p>
+    <div class="hero-links">
+      <a href="#">read my blog →</a>
+      <a href="#">watch my videos →</a>
+      <a href="#">see my game →</a>
+    </div>
+  </div>
+
+  <hr class="squiggle" />
+
+  <div class="section">
+    <div class="section-label">from the blog</div>
+    <div class="post-list">
+      <div class="post-item">
+        <div class="post-dot"></div>
+        <div>
+          <div class="post-meta">march 18 · 6 min</div>
+          <div class="post-title">On paying attention to the right things</div>
+          <div class="post-desc">A short thought on focus, noise, and what actually matters in a day.</div>
+          <div class="post-tags"><span class="tag">philosophy</span><span class="tag">life</span></div>
+        </div>
+      </div>
+      <div class="post-item">
+        <div class="post-dot"></div>
+        <div>
+          <div class="post-meta">march 10 · 8 min</div>
+          <div class="post-title">What making a game taught me about programming</div>
+          <div class="post-desc">Turns out game dev and software engineering are more different than I thought.</div>
+          <div class="post-tags"><span class="tag">tech</span><span class="tag">gamedev</span></div>
+        </div>
+      </div>
+      <div class="post-item">
+        <div class="post-dot"></div>
+        <div>
+          <div class="post-meta">feb 28 · 5 min</div>
+          <div class="post-title">Two years in the US — some honest reflections</div>
+          <div class="post-desc">Things I miss, things I've gained, and what home even means now.</div>
+          <div class="post-tags"><span class="tag">personal</span><span class="tag">turkey</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="squiggle" />
+
+  <div class="section">
+    <div class="section-label">a bit about me</div>
+    <div class="about-box">
+      <div class="about-avatar">:)</div>
+      <div class="about-text">
+        I'm a <strong>software engineer from Turkey</strong>, currently in the US finishing my Master's degree. I like helping people learn things — through writing, videos, or just honest conversation. When I'm not coding I'm building a small game that I hope to actually finish someday. This site has no brand, no agenda. Just stuff I make and think about.
+      </div>
+    </div>
+  </div>
+
+  <hr class="squiggle" />
+
+  <div class="section">
+    <div class="section-label">game dev corner</div>
+    <div class="gd-box">
+      <div class="gd-status"><span class="gd-dot"></span>in progress</div>
+      <div class="gd-title">Project Hollow — my first solo game</div>
+      <div class="gd-desc">A quiet little exploration game I'm building in Unity. Slow going but I'm learning a ton. I post vlogs and devlogs as I go — the messy parts included.</div>
+      <div class="gd-updates">
+        <span class="gd-chip">devlog #4 up</span>
+        <span class="gd-chip">added inventory system</span>
+        <span class="gd-chip">first playable build done</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="squiggle" />
+
+  <div class="section">
+    <div class="section-label">latest videos</div>
+    <div class="yt-row">
+      <div class="yt-card">
+        <div class="yt-thumb"><div class="yt-play"><div class="yt-tri"></div></div></div>
+        <div class="yt-info">
+          <div class="yt-title">How I structure my learning as an engineer</div>
+          <div class="yt-sub">12 min · 3 days ago</div>
+        </div>
+      </div>
+      <div class="yt-card">
+        <div class="yt-thumb"><div class="yt-play"><div class="yt-tri"></div></div></div>
+        <div class="yt-info">
+          <div class="yt-title">Game dev vlog #4 — inventory system hell</div>
+          <div class="yt-sub">18 min · last week</div>
+        </div>
+      </div>
+      <div class="yt-card">
+        <div class="yt-thumb"><div class="yt-play"><div class="yt-tri"></div></div></div>
+        <div class="yt-info">
+          <div class="yt-title">Things I wish I knew before my Master's</div>
+          <div class="yt-sub">9 min · 2 weeks ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">made with love · no tracking · just a person on the internet ☕</div>
+
+</body>
+</html>
