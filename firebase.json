@@ -4,11 +4,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "**/next/**"
-    ],
-    "predeploy": [
-      "npm run build"
+      "**/node_modules/**"
     ]
   }
 }
